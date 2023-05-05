@@ -24,6 +24,11 @@ public class ControllerRest {
 		return service.getTesti();
 	}
 	
+	@GetMapping("parolaPL")
+	String parolaPL() {
+		return service.parolaPL(6);
+	}
+	
 	@PostMapping("testi")
 	Testo addTesto(@RequestBody Testo t) {
 		return service.addTesto(t);

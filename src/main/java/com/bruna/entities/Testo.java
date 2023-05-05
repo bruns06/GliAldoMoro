@@ -13,6 +13,7 @@ public class Testo {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String txt;
+	private String parolaPL;
 	
 	public int getId() {
 		return id;
@@ -28,5 +29,14 @@ public class Testo {
 	
 	public void setTxt(String txt) {
 		this.txt = txt;
+	}
+
+	public String getParolaPL() {
+		return parolaPL;
+	}
+
+	public void setParolaPL(String parolaPL) {
+		this.parolaPL = parolaPL;
 	}	
+	
 }
