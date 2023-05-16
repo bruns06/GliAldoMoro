@@ -13,7 +13,7 @@ In primo luogo, abbiamo definito le seguenti 'entità':
 
 e come queste siano relazionate tra loro attraverso il modello relazionale descritto qui sotto:
 
- > Modello Entità-Relazione:
+ > Modello ER: <br>
  > [Link] https://github.com/bruns06/GliAldoMoro/blob/Inglese/Diagramma%20senza%20titolo.drawio.pdf
 
  
