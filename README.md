@@ -1,4 +1,50 @@
 
+# Product Backlog/LBP
+
+---
+
+Conta Frasi, DoD: (avere una funz. che ritorna una intero con le frasi presenti nel testo)[]
+
+Conta Parole, DoD: (avere una funz. che ritorna un intero con le parole presenti nel testo)[]
+
+Conta Caratteri, DoD: (avere una funz. che ritorna un intero con le lettere totali nel testo)[]
+
+Conta Caratteri Speciali, DoD: (avere una funz. che ritorna un intero con i caratteri speciali nel tes.)[]
+
+---
+
+Frase piú lunga, DoD: (avere una funz. che ritorna la frase piú lunga nel testo)[]
+
+Parola piú lunga, DoD: (avere una funz. che ritorna la parola piú lunga del testo)[]
+
+Parola piú usata, DoD: (avere una funz. che ritorna la parola piú presente nel testo)[]
+
+Lettera piú usata, DoD: (avere una funz. che ritorna la lettera piú usata nel testo)[]
+
+---
+
+Lingua (?) DoD: (Avere una funz. che riconosca la lingue del testo dalle parole chiave, si considera finito quando si hanno maybe 2/3 lingue e le altre man mano vengono implementate iterativamente in ogni sprint)[]
+
+Mood (?) DoD: (WIP)[]
+
+---
+
+Ha delle frasi fra parentesi (?), DoD: (Avere una funz. che riconosca se e quante frasi fra parentesi sono presenti nel testo)[]
+
+Quali (?)
+
+Ha delle frase fra virgolette (?) DoD: (Avere una funz. che riconosca se e quante frasi fra virgolette sono presenti nel testo)[]
+
+Quali (?)
+
+Ha dei discorsi diretti (?) DoD: (Avere una funz. che riconosca se e quante frasi sono discorsi dire.)[]
+
+Quali (?)
+
+---
+
+Formatta testo (?) DoD: (Avere una funz. che formatta correttamente il testo se non lo è di già.)[]
+
 # GliAldoMoro
 
 ## Progettazione Database ##
