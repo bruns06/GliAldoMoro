@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="ISO-8859-1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progetto learning by project</title>
+</head>
+<body>
+  <h1>Conta caratteri</h1>
+  <div>
+    <form id='myForm' method="post" action="/api/testi">
+     <textarea placeholder ="Inserisci qui il tuo testo" name="txt" id="" cols="70" rows="30"></textarea>
+      <button class="submit" type="submit">Invia</button>
+      <button calss="reset" type="button" onclick="test()" value="reset form">Reset</button>
+    </form>  
+  </div>
+  <div id="info-right">
+    <ul id="info-list">
+      <li> 
+        <span class="info-badges" id="badges-countchar">0</span>
+        "Caratteri"
+      </li>
+      <li>
+        <span class="info-badges" id="badges-countnospace">0</span>
+        "Caratteri (spazi esclusi)"
+      </li>
+      <li>
+        <span class="info-badges" id="badges-words">0</span>
+        "Parole"
+      </li>
+      <li>
+        <span class="info-badges" id="badges-phrases">0</span>
+        "Frasi"
+      </li>
+      <li>
+        <span class="info-badges" id="badges-paragraph">0</span>
+        "Paragrafi"
+      </li>
+    </ul>
+  </div>
+  <script type="text/javascript">
+	
+  	
+  
+  </script>
+
+</body>
+</html>
+
