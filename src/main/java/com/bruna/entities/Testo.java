@@ -3,10 +3,13 @@ package com.bruna.entities;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -15,19 +18,31 @@ import jakarta.persistence.Table;
 public class Testo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_testo;
+	private int id;
+	@Column(length = 8000)
 	private String contenuto;
 	private String parola_più_lunga;
 	
-	@OneToMany(mappedBy = "id_paragrafo")
-	private List<Paragrafo> paragrafi = new ArrayList<Paragrafo>();
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "testo")
+	private List<Frase> frase = new ArrayList<Frase>();
 	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "testo")
+	private List<Parola> parole = new ArrayList<Parola>();
+	
+	public List<Parola> getParole() {
+		return parole;
+	}
+
+	public void setParole(List<Parola> parole) {
+		this.parole = parole;
+	}
+
 	public int getId() {
-		return id_testo;
+		return id;
 	}
 	
 	public void setId(int id) {
-		this.id_testo = id;
+		this.id = id;
 	}
 	
 	public String getTxt() {

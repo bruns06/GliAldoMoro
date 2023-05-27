@@ -3,22 +3,55 @@ package com.bruna.services;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.bruna.entities.Frase;
+import com.bruna.entities.Parola;
 import com.bruna.entities.Testo;
+import com.bruna.repo.FraseDAO;
+import com.bruna.repo.ParolaDAO;
 import com.bruna.repo.TestoDAO;
 
 @Service
 public class TestoServiceImpl implements TestoService {
 	@Autowired
-	private TestoDAO dao;
+	private TestoDAO tdao;
+	@Autowired
+	private FraseDAO fdao;
+	@Autowired
+	private ParolaDAO pdao;
 	
 	@Override
-	public Testo addTesto(Testo t) {
-		return dao.save(t);
+	public void addTesto(Testo t) {
+		String testo = t.getTxt();
+		String testo2 = t.getTxt();
+		tdao.save(t);
+		testo.trim();
+		String[] sentences = testo.split("(\\.)|(\\:)");
+		String[] parole = testo2.split("(\\s)");
+		System.out.println(sentences[0]);
+		  for (String frase : sentences) {
+	         
+			  	Frase f = new Frase();
+	            f.setContenuto(frase);
+	            f.setTesto(t);
+	            fdao.save(f);
+		  }
+		  
+		  for (String parola : parole) {
+	            Parola p = new Parola();
+	            p.setContenuto(parola);
+	            p.setTesto(t);
+	            pdao.save(p);
+	        }
+		 
+		 
+		  
+		 
 	}
 
 	@Override
 	public List<Testo> getTesti() {
-		return dao.findAll();
+		return tdao.findAll();
 	}
 
 	//RICERCA DELLA PAROLA PIU' LUNGA, 
@@ -60,13 +93,13 @@ public class TestoServiceImpl implements TestoService {
 		}
 		
 		t.setParolaPL(terminePLMax);
-		dao.save(t);
+		tdao.save(t);
 		return terminePLMax;
 	}
 
 	@Override
 	public Testo getTesto(int id) {
-		return dao.findById(id).get();
+		return tdao.findById(id).get();
 	}
 
 }

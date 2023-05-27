@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 public class Parola {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_parola;
+	private int id;
 	private String contenuto;
 	
 	public String getContenuto() {
@@ -25,14 +25,19 @@ public class Parola {
 	}
 
 	public int getId_parola() {
-		return id_parola;
+		return id;
 	}
 
-	public Parola getParola() {
-		return parola;
-	}
 
 	@ManyToOne
-	@JoinColumn(name = "id_frase")
-	private Parola parola;
+	private Testo testo;
+
+	public Testo getTesto() {
+		return testo;
+	}
+
+	public void setTesto(Testo testo) {
+		this.testo = testo;
+	}
+	
 }

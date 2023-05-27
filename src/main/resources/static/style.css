@@ -1,0 +1,31 @@
+@charset "ISO-8859-1";
+
+#info-right{}
+
+.form-control{
+	width: 50%;
+	height: 50%;
+}
+
+.form-control, h1{
+	margin: 0 auto;
+	text-align: center;
+}
+
+button{
+	position: relative;
+	left: 32%;
+	width: 200px;
+	margin-left: 50px;
+	top: 35px;
+}
+
+#info-right{
+	position:absolute;
+	bottom:65%;
+	font-family: monospace;
+}
+
+body{
+	background-color: lime;
+}

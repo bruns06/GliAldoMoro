@@ -6,37 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Progetto learning by project</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Conta caratteri</h1>
   <div>
-    <form id='myForm' method="post" action="/api/testi" enctype = "multipart/form-data">
-     <textarea placeholder ="Inserisci qui il tuo testo" name="Textarea" id="" cols="70" rows="30"></textarea>
-      <button class="submit" type="submit">Invia</button>
-      <button calss="reset" type="button" onclick="test()" value="reset form">Reset</button>
+    <form id='myForm' method="post" action="/api/testi">
+     <textarea class="form-control placeholder ="Inserisci qui il tuo testo" name="txt" rows="20"></textarea>
+      <button class="btn btn-primary" type="submit">Invia</button>
+      <button class="btn btn-secondary" type="button" onclick="test()" value="reset form">Reset</button>
     </form>  
   </div>
   <div id="info-right">
     <ul id="info-list">
       <li> 
-        <span class="info-badges" id="badges-countchar">0</span>
-        "Caratteri"
+        <a class="info-badges" id="badges-countchar" href="/caratteri.html">Caratteri:</a>
+        0
       </li>
       <li>
-        <span class="info-badges" id="badges-countnospace">0</span>
-        "Caratteri (spazi esclusi)"
+        <a class="info-badges" id="badges-words" href="/parole.html">Parole: </a>
+        0
       </li>
       <li>
-        <span class="info-badges" id="badges-words">0</span>
-        "Parole"
-      </li>
-      <li>
-        <span class="info-badges" id="badges-phrases">0</span>
-        "Frasi"
-      </li>
-      <li>
-        <span class="info-badges" id="badges-paragraph">0</span>
-        "Paragrafi"
+        <a class="info-badges" id="badges-phrases" href="/frasi.html">Frasi:</a>
+        0
       </li>
     </ul>
   </div>
@@ -45,7 +39,7 @@
   	
   
   </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
 
