@@ -1,9 +1,16 @@
+/*
+ * @file: ControllerRest.java
+ * @about: Classe che rappresenta le chiamate api al db
+ * @path: /api/foobar
+ */
+
 package com.bruna.integration;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +25,7 @@ import com.bruna.services.TestoService;
 @RestController
 @RequestMapping("/api")
 public class ControllerRest {
-
+	//SERVIZI
 	@Autowired
 	private TestoService service;
 	
@@ -28,16 +35,19 @@ public class ControllerRest {
 	@Autowired
 	private ParolaService pservice;
 	
+	//Get Requests
+	@ModelAttribute("testiModelAttribute")
 	@GetMapping("/testi")
 	List<Testo> getTesto(){
 		return service.getTesti();
 	}
-	
+	//da sistemare
 	@GetMapping("/parolaPL")
 	String parolaPL() {
 		return service.parolaPL(6);
 	}
 	
+	//Post Requests
 	@PostMapping("/testi")
 	void addTesto(Testo t) {
 		service.addTesto(t);

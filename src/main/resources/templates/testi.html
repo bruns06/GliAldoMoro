@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="ISO-8859-1">
+<title>Testi</title>
+</head>
+<body>
+
+	<tr th:each="testo : ${testi}">
+        
+        <td th:text="${testo.id}"></td>
+        <td th:text="${testo.txt}"></td>
+        <br>
+        <br>
+   </th:block>
+
+</body>
+</html>

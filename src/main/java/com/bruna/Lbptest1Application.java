@@ -1,3 +1,9 @@
+/*
+ * Entry Point Spring Boot del progetto. 
+ * @Gruppo: GLI ALDI MORO
+ * Lavoro di gruppo per il corso di LBP 
+ */
+
 package com.bruna;
 
 import org.springframework.boot.SpringApplication;

@@ -1,8 +1,12 @@
+/*
+ * @file: Testo.java
+ * @about: Classe che rappresenta l'entità madre testo nel database
+ */
+
 package com.bruna.entities;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,9 +17,13 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
+//Rappresenta la tabella testo nel db
 @Entity
 @Table(name = "testo")
 public class Testo {
+	
+	//ENTITA' TABELLA
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -28,6 +36,8 @@ public class Testo {
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "testo")
 	private List<Parola> parole = new ArrayList<Parola>();
+	
+	//GETTERS AND SETTERS
 	
 	public List<Parola> getParole() {
 		return parole;
