@@ -17,10 +17,8 @@
     <p class="card-text" th:text="${testo.txt}"></p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Numero Frasi: </li>
-    <li class="list-group-item">Numero Parole: </li>
-    <li class="list-group-item">Frase più lunga: </li>
-    <li class="list-group-item">Parola più lunga: </li>
+    <li th:text="${'Numero frasi: ' + numeroFrasi}" class="list-group-item"></li>
+    <li th:text="${'Numero parole: ' + numeroParole}" class="list-group-item"></li>
   </ul>
   <div class="card-body">
     <a href="#" class="card-link">Apri Testo</a>
