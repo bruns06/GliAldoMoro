@@ -5,8 +5,11 @@ div {
 	flex-direction: row;
 	width: 750px;
 	height: 600px;
-	overflow:hidden;
 	margin: 0 auto;
+}
+
+.card-text{
+	overflow: scroll;
 }
 
 
