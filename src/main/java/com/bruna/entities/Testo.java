@@ -29,8 +29,10 @@ public class Testo {
 	private int id;
 	@Column(length = 8000)
 	private String contenuto;
-	private String parola_più_lunga;
-	
+	private int numeroFrasi;
+	private int numeroParole;
+	private String FrasePiuLunga;
+	private String parolaPiuLunga;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "testo")
 	private List<Frase> frase = new ArrayList<Frase>();
 	
@@ -46,6 +48,22 @@ public class Testo {
 	public void setParole(List<Parola> parole) {
 		this.parole = parole;
 	}
+	
+	public String getParolaPiuLunga() {
+		return parolaPiuLunga;
+	}
+
+	public void setParolaPiuLunga(String parolaPiuLunga) {
+		this.parolaPiuLunga = parolaPiuLunga;
+	}
+
+	public String getFrasePiuLunga() {
+		return FrasePiuLunga;
+	}
+
+	public void setFrasePiuLunga(String frasePiùLunga) {
+		FrasePiuLunga = frasePiùLunga;
+	}
 
 	public int getId() {
 		return id;
@@ -55,6 +73,14 @@ public class Testo {
 		this.id = id;
 	}
 	
+	public int getNumeroParole() {
+		return numeroParole;
+	}
+
+	public void setNumeroParole(int numeroParole) {
+		this.numeroParole = numeroParole;
+	}
+
 	public String getTxt() {
 		return contenuto;
 	}
@@ -63,12 +89,14 @@ public class Testo {
 		this.contenuto = txt;
 	}
 
-	public String getParolaPL() {
-		return parola_più_lunga;
+	public int getNumeroFrasi() {
+		return numeroFrasi;
 	}
 
-	public void setParolaPL(String parolaPL) {
-		this.parola_più_lunga = parolaPL;
+	public void setNumeroFrasi(int numeroFrasi) {
+		this.numeroFrasi = numeroFrasi;
 	}	
+	
+	
 	
 }

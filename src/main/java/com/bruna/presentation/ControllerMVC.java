@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.bruna.entities.Testo;
+import com.bruna.services.FraseService;
 import com.bruna.services.TestoService;
 import com.bruna.repo.FraseDAO;
 import com.bruna.repo.ParolaDAO;
@@ -18,18 +19,30 @@ public class ControllerMVC {
 	@Autowired
 	private TestoService service;
 	@Autowired
+	private FraseService fservice;
+	@Autowired
 	private TestoDAO dao;
 	@Autowired
 	private FraseDAO fdao;
 	@Autowired
 	private ParolaDAO pdao;
 	
+	@GetMapping({"/", "home", "index"})
+	public String home() {
+		return "index.html";
+	}
 	
-	@GetMapping("/testiPresenti")
+	
+	
+	@GetMapping("testi")
 	public String showTesti (Model m) {
 		m.addAttribute("testi", dao.findAll());
-		m.addAttribute("numeroFrasi", fdao.count());
-		m.addAttribute("numeroParole", pdao.count());
 		return "testi.html";
+	}
+	
+	@PostMapping("/testi")
+	public String addTesto(Testo t) {
+		service.addTesto(t);
+		return "redirect:/testi";
 	}
 }

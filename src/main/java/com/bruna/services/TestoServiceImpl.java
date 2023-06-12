@@ -24,14 +24,31 @@ public class TestoServiceImpl implements TestoService {
 	public void addTesto(Testo t) {
 		String testo = t.getTxt();
 		String testo2 = t.getTxt();
-		tdao.save(t);
-		testo.trim();
+		String parolaPiuLunga = "";
+	  	String frasePiuLunga = "";
 		String[] sentences = testo.split("(\\.)|(\\:)");
 		String[] parole = testo2.split("(\\s)");
+		for (String frase : sentences) {
+			if(frase.length() > frasePiuLunga.length()) {
+				frasePiuLunga = frase;
+			}
+		}
+		for (String par : parole) {
+			if(par.length() > parolaPiuLunga.length()) {
+				parolaPiuLunga = par;
+			}
+		}
+		t.setParolaPiuLunga(parolaPiuLunga);
+		t.setFrasePiuLunga(frasePiuLunga);
+		tdao.save(t);
+		testo.trim();
+		t.setNumeroFrasi(sentences.length);
+		t.setNumeroParole(parole.length);
 		System.out.println(sentences[0]);
 		  for (String frase : sentences) {
 	         
 			  	Frase f = new Frase();
+			  	
 	            f.setContenuto(frase);
 	            f.setTesto(t);
 	            fdao.save(f);
@@ -50,15 +67,12 @@ public class TestoServiceImpl implements TestoService {
 		return tdao.findAll();
 	}
  
-	@Override
-	public Testo getTesto(int id) {
-		return tdao.findById(id).get();
-	}
 
 	@Override
 	public String parolaPL(int id) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
+	
 
 }

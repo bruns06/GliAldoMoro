@@ -15,6 +15,7 @@ public class FraseServiceImpl implements FraseService {
 	public FraseServiceImpl(FraseDAO fdao) {
 		this.fdao = fdao;
 	}
+	
 	@Override
 	public void addFrase(Testo t) {
 		String testo = t.getTxt();

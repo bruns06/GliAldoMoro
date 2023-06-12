@@ -23,7 +23,6 @@ import com.bruna.services.ParolaService;
 import com.bruna.services.TestoService;
 
 @RestController
-@RequestMapping("/api")
 public class ControllerRest {
 	//SERVIZI
 	@Autowired
@@ -37,21 +36,11 @@ public class ControllerRest {
 	
 	//Get Requests
 	@ModelAttribute("testiModelAttribute")
-	@GetMapping("/testi")
+	@GetMapping("api/testi")
 	List<Testo> getTesto(){
 		return service.getTesti();
 	}
-	//da sistemare
-	@GetMapping("/parolaPL")
-	String parolaPL() {
-		return service.parolaPL(6);
-	}
-	
-	//Post Requests
-	@PostMapping("/testi")
-	void addTesto(Testo t) {
-		service.addTesto(t);
-	}
+
 	
 }
 
