@@ -1,0 +1,30 @@
+@charset "ISO-8859-1";
+
+body{
+	margin:0;
+	background-image: url("../img/wallpaper.jpg");
+}
+.container {
+	margin-top:45px;
+	display: grid;
+  	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  	gap: 75px;
+}
+
+.card{
+	height: 600px;
+	background: rgba(0,200,50);
+}
+
+#txt{
+	overflow: auto;
+}
+
+.list-group-item{
+	background: rgba(0,150,50);
+}
+
+#frase-piu{
+	overflow: auto;
+	height: 65px;
+}
