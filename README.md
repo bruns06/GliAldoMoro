@@ -1,4 +1,4 @@
-# Benvenuti a Parolify
+# Parolify
 
 ## Descrizione del progetto
 
