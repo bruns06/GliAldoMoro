@@ -2,7 +2,7 @@
 
 ## Descrizione del progetto
 
-Text Analyzer è un'applicazione web sviluppata con Spring Boot in Java. Questo progetto ti permette di analizzare il testo inserito tramite un modulo. Il testo verrà scomposto e i dati relativi saranno salvati nel database. In una seconda visualizzazione, saranno mostrate le seguenti informazioni: il numero di parole, il numero di frasi, la parola più utilizzata, la parola più lunga, la parola più utilizzata per frase e la parola più lunga per frase.
+Parolify è un'applicazione web sviluppata con Spring Boot in Java. Questo progetto ti permette di analizzare il testo inserito tramite un modulo. Il testo verrà scomposto e i dati relativi saranno salvati nel database. In una seconda visualizzazione, saranno mostrate le seguenti informazioni: il numero di parole, il numero di frasi, la parola più utilizzata, la parola più lunga, la parola più utilizzata per frase e la parola più lunga per frase.
 
 ## Funzionalità principali
 
