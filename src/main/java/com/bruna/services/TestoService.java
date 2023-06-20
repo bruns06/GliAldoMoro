@@ -7,4 +7,5 @@ public interface TestoService {
 	void addTesto(Testo t);
 	List<Testo> getTesti();
 	String parolaPL(int id);
+	Testo getTestoById(int id);
 }

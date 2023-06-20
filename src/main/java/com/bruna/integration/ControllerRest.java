@@ -9,14 +9,12 @@ package com.bruna.integration;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bruna.entities.Frase;
 import com.bruna.entities.Testo;
 import com.bruna.services.FraseService;
 import com.bruna.services.ParolaService;
@@ -41,6 +39,11 @@ public class ControllerRest {
 		return service.getTesti();
 	}
 
+	@GetMapping("/testi/{id}")
+	public Testo getTextbyId(@PathVariable int id) {
+	    return service.getTestoById(id);
+	}
+	
 	
 }
 

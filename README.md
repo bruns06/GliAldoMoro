@@ -40,3 +40,4 @@ e come queste siano relazionate tra loro attraverso il modello relazionale descr
 
 
 
+# Learning-By-Project---Parolify

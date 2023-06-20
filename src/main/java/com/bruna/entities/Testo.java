@@ -7,6 +7,11 @@ package com.bruna.entities;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -31,23 +36,38 @@ public class Testo {
 	private String contenuto;
 	private int numeroFrasi;
 	private int numeroParole;
+	private int numerCaratteri;
 	private String FrasePiuLunga;
 	private String parolaPiuLunga;
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "testo")
-	private List<Frase> frase = new ArrayList<Frase>();
+	private String parolaPiuUsata;
 	
+	
+	
+	public int getNumerCaratteri() {
+		return numerCaratteri;
+	}
+
+	public void setNumerCaratteri(int numerCaratteri) {
+		this.numerCaratteri = numerCaratteri;
+	}
+
+	public String getParolaPiuUsata() {
+		return parolaPiuUsata;
+	}
+
+	public void setParolaPiuUsata(String parolaPiuUsata) {
+		this.parolaPiuUsata = parolaPiuUsata;
+	}
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "testo")
+	
+	private List<Frase> frase = new ArrayList<Frase>();
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "testo")
+	
 	private List<Parola> parole = new ArrayList<Parola>();
 	
 	//GETTERS AND SETTERS
 	
-	public List<Parola> getParole() {
-		return parole;
-	}
-
-	public void setParole(List<Parola> parole) {
-		this.parole = parole;
-	}
+	
 	
 	public String getParolaPiuLunga() {
 		return parolaPiuLunga;
@@ -95,8 +115,17 @@ public class Testo {
 
 	public void setNumeroFrasi(int numeroFrasi) {
 		this.numeroFrasi = numeroFrasi;
+	}
+
+	public List<Frase> getFrase() {
+		return frase;
+	}
+
+	public void setFrase(List<Frase> frase) {
+		this.frase = frase;
 	}	
 	
 	
 	
 }
+

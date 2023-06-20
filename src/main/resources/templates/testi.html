@@ -21,9 +21,11 @@
     <li th:text="${'Numero parole: ' + testo.numeroParole}" class="list-group-item"></li>
     <li th:text="${'Frase più lunga: ' + testo.FrasePiuLunga}" id="frase-piu" class="list-group-item"></li>
     <li th:text="${'Parola più lunga: ' + testo.parolaPiuLunga}" class="list-group-item"></li>
+    <li th:text="${'Parola più usata: ' + testo.parolaPiuUsata}" class="list-group-item"></li>
+    
   </ul>
   <div class="card-body">
-    <a href="#" class="card-link">Apri Testo</a>
+    <a th:href="@{'/testi/' + ${testo.id}}">view</a>
   </div>
 </div>
 </div>
