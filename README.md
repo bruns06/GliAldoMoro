@@ -51,4 +51,4 @@ mvn spring-boot:run
 
 6. L'applicazione sarà accessibile all'indirizzo http://localhost:2506 nel tuo browser web.
 
-Speriamo che troverai utile l'applicazione Text Analyzer. Buon divertimento nell'analisi dei tuoi testi!
+Speriamo che troverai utile l'applicazione Parolify. Buon divertimento nell'analisi dei tuoi testi!
