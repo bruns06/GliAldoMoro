@@ -32,7 +32,7 @@ Per eseguire correttamente l'applicazione, sono necessari i seguenti requisiti:
 1. Clona il repository GitHub del progetto Text Analyzer nel tuo ambiente di sviluppo:
 
 ```shell
-git clone https://github.com/tuo_nome_utente/text-analyzer.git
+git clone https://github.com/bruns06/Parolify.git
 ```
 
 2. Apri il progetto nel tuo IDE preferito.
