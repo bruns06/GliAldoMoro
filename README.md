@@ -1,8 +1,8 @@
-# Benvenuti a Parolify
+# Parolify
 
 ## Descrizione del progetto
 
-Text Analyzer è un'applicazione web sviluppata con Spring Boot in Java. Questo progetto ti permette di analizzare il testo inserito tramite un modulo. Il testo verrà scomposto e i dati relativi saranno salvati nel database. In una seconda visualizzazione, saranno mostrate le seguenti informazioni: il numero di parole, il numero di frasi, la parola più utilizzata, la parola più lunga, la parola più utilizzata per frase e la parola più lunga per frase.
+Parolify è un'applicazione web sviluppata con Spring Boot in Java. Questo progetto ti permette di analizzare il testo inserito tramite un modulo. Il testo verrà scomposto e i dati relativi saranno salvati nel database. In una seconda visualizzazione, saranno mostrate le seguenti informazioni: il numero di parole, il numero di frasi, la parola più utilizzata, la parola più lunga, la parola più utilizzata per frase e la parola più lunga per frase.
 
 ## Funzionalità principali
 
@@ -32,7 +32,7 @@ Per eseguire correttamente l'applicazione, sono necessari i seguenti requisiti:
 1. Clona il repository GitHub del progetto Text Analyzer nel tuo ambiente di sviluppo:
 
 ```shell
-git clone https://github.com/tuo_nome_utente/text-analyzer.git
+git clone https://github.com/bruns06/Parolify.git
 ```
 
 2. Apri il progetto nel tuo IDE preferito.
@@ -51,4 +51,4 @@ mvn spring-boot:run
 
 6. L'applicazione sarà accessibile all'indirizzo http://localhost:2506 nel tuo browser web.
 
-Speriamo che troverai utile l'applicazione Text Analyzer. Buon divertimento nell'analisi dei tuoi testi!
+Speriamo che troverai utile l'applicazione Parolify. Buon divertimento nell'analisi dei tuoi testi!
