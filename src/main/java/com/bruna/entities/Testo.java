@@ -37,6 +37,7 @@ public class Testo {
 	private int numeroFrasi;
 	private int numeroParole;
 	private int numerCaratteri;
+	@Column(length = 8000)
 	private String FrasePiuLunga;
 	private String parolaPiuLunga;
 	private String parolaPiuUsata;
