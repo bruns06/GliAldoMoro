@@ -24,17 +24,3 @@ magnetics.forEach((magnetic) => {
         magnetic.children[0].style.transform = "translate(0px, 0px)";
     });
 });
-
-
-const menuBtn = document.querySelector('.menu-btn');
-
-let menuOpen = false;
-menuBtn.addEventListener('click', () => {
-    if(!menuOpen) {
-        menuBtn.classList.add('open');
-        menuOpen = true;
-    } else {
-        menuBtn.classList.remove('open');
-        menuOpen = false;
-    }
-});

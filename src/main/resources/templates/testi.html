@@ -19,10 +19,9 @@
   <ul class="list-group list-group-flush">
     <li th:text="${'Numero frasi: ' + testo.numeroFrasi}" class="list-group-item"></li>
     <li th:text="${'Numero parole: ' + testo.numeroParole}" class="list-group-item"></li>
-    <li th:text="${'Frase pi&#249 lunga: ' + testo.FrasePiuLunga}" id="frase-piu" class="list-group-item"></li>
-    <li th:text="${'Parola pi&#249 lunga: ' + testo.parolaPiuLunga}" class="list-group-item"></li>
-    <li th:text="${'Parola pi&#249 usata: ' + testo.parolaPiuUsata}" class="list-group-item"></li>
-    
+    <li th:text="${'Frase più lunga: ' + testo.FrasePiuLunga}" id="frase-piu" class="list-group-item"></li>
+    <li th:text="${'Parola più lunga: ' + testo.parolaPiuLunga}" class="list-group-item"></li>
+    <li th:text="${'Parola più usata: ' + testo.parolaPiuUsata}" class="list-group-item"></li>
   </ul>
   <div class="card-body">
     <a th:href="@{'/testi/' + ${testo.id}}">view</a>
@@ -32,4 +31,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
-</html>
+</html>zz

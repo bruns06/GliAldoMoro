@@ -40,6 +40,8 @@ textarea {
 }
 
 
+/*navbar*/
+
 .navbar {
     max-width: 1800px;
     padding: 20px;  
@@ -49,23 +51,17 @@ textarea {
     margin: auto;
     display: flex;
 }
+
 .navbar-left {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    width: 350px;
-}
-.navbar-center {
     transform: translate(-26% ,0);
 }
-.navbar-center img {
+.navbar-left img {
     width: 200px;   
     transition: transform 2s linear;   
     animation-name: FadeIn-bottom;
     animation-duration: 2s;
 }
-.navbar-center img:hover{
+.navbar-left img:hover{
     cursor: pointer;
 }
 .navbar-right:hover > :not(:hover) {
@@ -82,51 +78,7 @@ textarea {
 }
 
 
-.menu-btn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-}
-.menu-btn-burger {
-    width: 30px;
-    height: 5px;
-    background: var(--primary);
-    border-radius: 5px;
-    transition: all .5s ease-in-out;
-}
-.menu-btn-burger::before,
-.menu-btn-burger::after {
-    content: '';
-    position: absolute;
-    width: 35px;
-    height: 5px;
-    background: var(--primary);
-    border-radius: 5px;
-    transition: all .5s ease-in-out;
-}
-.menu-btn-burger::before {
-    transform: translateY(-12px);
-}
-.menu-btn-burger::after {
-    transform: translateY(12px);
-}
-.menu-btn.open .menu-btn-burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-}
-.menu-btn.open .menu-btn-burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-}
-.menu-btn.open .menu-btn-burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-}
-
+/*center*/
 
 .center {
     display: flex;
@@ -143,6 +95,20 @@ textarea {
     width: 700px;
 }
 
+.results {
+    padding: 12px;
+    border: 2.5px solid var(--primary);
+    border-radius: 5px;
+    text-align: center;
+}
+.results:hover {
+    cursor: pointer;
+    color: var(--transparent);
+    border-color: var(--transparent);
+}
+
+
+/*footer*/
 
 .footer {
     padding: 20px;  
@@ -168,20 +134,6 @@ textarea {
     margin-right: 10px;
     animation: location-rotate 2s ease-in-out;
     animation-iteration-count: infinite;
-}
-
-.watch-portfolio {
-    padding: 12px;
-    border: 2.5px solid var(--primary);
-    border-radius: 5px;
-    width: 250px;
-    text-align: center;
-    transform: translate(-15% ,0);
-}
-.watch-portfolio:hover {
-    cursor: pointer;
-    color: var(--transparent);
-    border-color: var(--transparent);
 }
 
 .credit {
@@ -231,7 +183,7 @@ textarea {
 }
 
 
-
+/*animations*/
 
 @keyframes FadeIn {
     0% {

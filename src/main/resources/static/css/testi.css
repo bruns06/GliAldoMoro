@@ -13,7 +13,8 @@ body{
 
 .card{
 	height: 600px;
-	background: rgba(0,200,50);
+	background: rgb(255, 255, 255);
+	border-radius: 25px;
 }
 
 #txt{
@@ -21,7 +22,7 @@ body{
 }
 
 .list-group-item{
-	background: rgba(0,150,50);
+	background: rgba(255, 255, 255, 0.123);
 }
 
 #frase-piu{
