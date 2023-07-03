@@ -39,6 +39,11 @@ textarea {
     filter: drop-shadow(1px 1px 10px var(--black));
 }
 
+button{
+	position: relative;
+	top: 50px;
+	right: 320px;
+}
 
 /*navbar*/
 

@@ -39,6 +39,15 @@ public class Frase {
 	@ManyToOne
 	@JsonIgnore
 	private Testo testo;
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	private String parolaPiuUsataPerFrase;
 	private String parolaPiuLungaPerFrase;
 	//GETTERS AND SETTERS

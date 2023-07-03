@@ -39,7 +39,7 @@ public class ControllerRest {
 		return service.getTesti();
 	}
 
-	@GetMapping("/testi/{id}")
+	@GetMapping("api/testi/{id}")
 	public Testo getTextbyId(@PathVariable int id) {
 	    return service.getTestoById(id);
 	}
