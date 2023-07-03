@@ -37,12 +37,10 @@ public class Testo {
 	private int numeroFrasi;
 	private int numeroParole;
 	private int numerCaratteri;
-	@Column(length = 8000)
+	@Column(length = 4000)
 	private String FrasePiuLunga;
 	private String parolaPiuLunga;
 	private String parolaPiuUsata;
-	
-	
 	
 	public int getNumerCaratteri() {
 		return numerCaratteri;
@@ -59,16 +57,14 @@ public class Testo {
 	public void setParolaPiuUsata(String parolaPiuUsata) {
 		this.parolaPiuUsata = parolaPiuUsata;
 	}
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "testo")
 	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "testo")
 	private List<Frase> frase = new ArrayList<Frase>();
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "testo")
 	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "testo")
 	private List<Parola> parole = new ArrayList<Parola>();
 	
 	//GETTERS AND SETTERS
-	
-	
 	
 	public String getParolaPiuLunga() {
 		return parolaPiuLunga;
