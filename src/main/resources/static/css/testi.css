@@ -17,9 +17,7 @@ body{
 	border-radius: 25px;
 }
 
-#txt{
-	overflow: auto;
-}
+
 
 .list-group-item{
 	background: rgba(255, 255, 255, 0.123);
