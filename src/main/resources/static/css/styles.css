@@ -27,6 +27,10 @@ a {
     text-decoration: none;
 }
 
+.card{
+	overflow: scroll;
+}
+
 textarea {
     resize: none;
     border-radius: 10px;
